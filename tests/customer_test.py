@@ -5,7 +5,7 @@ from src.pub import Pub
 
 class TestCustomer(unittest.TestCase):
     def setUp(self):
-        self.customer = Customer('Robin', 50)
+        self.customer = Customer('Robin', 50, 19)
         self.drink = Drink('hibster beer', 3)
         self.pub = Pub('The Dancing Otter', 100)
 
@@ -22,4 +22,7 @@ class TestCustomer(unittest.TestCase):
     def test_buy_drink(self):
         self.customer.buy_drink(self.drink, self.pub)
         self.assertEqual(47, self.customer.wallet)
-        self.assertEqual(103, self.pub.cash)
+    
+    # def test_sell_buy_drink(self):
+    #     self.customer.buy_drink(self.drink, self.pub)
+    #     self.assertEqual(103, self.pub.cash)
