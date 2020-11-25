@@ -6,7 +6,7 @@ from src.customer import Customer
 class TestPub(unittest.TestCase):
     def setUp(self):
         self.pub = Pub('The Dancing Otter', 100)
-        self.drink = Drink('hibster beer', 3)
+        self.drink = Drink('hibster beer', 3, 1)
         self.customer = Customer('Robin', 50, 19)
 
     def test_pub_has_name(self):
